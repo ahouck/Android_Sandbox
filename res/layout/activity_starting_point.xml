@@ -9,14 +9,27 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/hello_world" 
-    />
-    <TextView
-        android:layout_width="wrap_content"
+        android:text="Calculation = x" 
+        android:textSize="45sp"
+        android:id="@+id/txtDisplay"
+        />
+
+    <Button
+        android:id="@+id/btnSubtract"
+        android:layout_width="250sp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/txtDisplay"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" 
-    />
+        android:layout_marginBottom="82dp"
+        android:text="Subtract one" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSubtract"
+        android:layout_alignLeft="@+id/btnSubtract"
+        android:layout_marginBottom="21dp"
+        android:text="Add one" />
 
 </RelativeLayout>
