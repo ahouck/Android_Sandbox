@@ -26,8 +26,22 @@ public class StartingPoint extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				total++;
-				txtDisplay.setText("Total = " + total);
+				for(int i=2; i <= 10000; i++)
+				{
+					if(isPrime(i,2))
+					{
+						try {
+							txtDisplay.setText("Prime = " + i);
+							Thread.sleep(500);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						
+					}
+				}
+			//	total++;
+			//	txtDisplay.setText("Total = " + total);
 			}
 		});
 		// Onclick Event
@@ -41,6 +55,17 @@ public class StartingPoint extends Activity {
 		});
 		
 	}
+	
+	public boolean isPrime (int n, int m)
+	 {
+	    if (n==1)
+	    return false;
+	    if (n==2) return true;
+	    if (n%m==0)
+	    return false;
+	    if(m >= Math.sqrt(n)) return true;
+	    return isPrime(n, m+1);
+	 }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

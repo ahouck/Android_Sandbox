@@ -23,11 +23,19 @@
             </intent-filter>
         </activity>
        <activity
-            android:name="com.New_Boston_Tutorial.STARTINGPOINT"
+            android:name=".StartingPoint"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.New_Boston_Tutorial.STARTINGPOINT" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+               <activity
+            android:name=".Menu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.New_Boston_Tutorial.MENU" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
