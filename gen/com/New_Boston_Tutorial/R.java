@@ -18,7 +18,8 @@ public final class R {
         public static final int btnAdd=0x7f080002;
         public static final int btnResults=0x7f080004;
         public static final int btnSubtract=0x7f080001;
-        public static final int menu_settings=0x7f080006;
+        public static final int menu_settings=0x7f080007;
+        public static final int switch1=0x7f080006;
         public static final int txtDisplay=0x7f080000;
         public static final int txtEdit=0x7f080003;
         public static final int txtResults=0x7f080005;

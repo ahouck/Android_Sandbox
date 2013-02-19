@@ -12,14 +12,27 @@
 	    android:hint="Must be text"
 	    android:textAlignment="center"
 	    android:password="true" />
-
+	<LinearLayout
+	    	android:weightSum="100"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height= "wrap_content"
+	    	android:orientation="horizontal" >
 	<Button
+	    android:layout_weight="20"
 	    android:id="@+id/btnResults"
 	    style="?android:attr/buttonStyleSmall"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:text="Button" />
 
+	<ToggleButton
+	    android:layout_weight="80"
+	    android:id="@+id/switch1"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Switch" />
+	</LinearLayout>
+	
 	<EditText
 	    android:id="@+id/txtResults"
 	    android:layout_width="match_parent"
@@ -29,5 +42,6 @@
 
 	    <requestFocus />
 	</EditText>
+
 
 </LinearLayout>
