@@ -8,7 +8,7 @@ import android.widget.ListView;
 
 
 public class Menu extends ListActivity{
-	String classes[] = {StartingPoint.class.getName(), "example 1", "example 2", "example 3"};
+	String classes[] = {StartingPoint.class.getName(), TextPlay.class.getName(), "example 2", "example 3"};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

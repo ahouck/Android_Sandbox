@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:textAlignment="center" >
+    android:textAlignment="center"
+    android:padding="25dp" >
     
 	<EditText
 	    android:layout_width="fill_parent"
@@ -23,11 +24,13 @@
 	    style="?android:attr/buttonStyleSmall"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:text="Button" />
+	    android:text="Try Command" />
 
 	<ToggleButton
 	    android:layout_weight="80"
-	    android:id="@+id/switch1"
+	    android:padding="10dp"
+	    android:checked="true"
+	    android:id="@+id/tbPassword"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:text="Switch" />
