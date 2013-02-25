@@ -1,6 +1,7 @@
 package com.New_Boston_Tutorial;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.graphics.Camera;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -8,7 +9,7 @@ import android.widget.ListView;
 
 
 public class Menu extends ListActivity{
-	String classes[] = {StartingPoint.class.getName(), TextPlay.class.getName(), "example 2", "example 3"};
+	String classes[] = {StartingPoint.class.getName(), TextPlay.class.getName(), Email.class.getName(), Camera.class.getName()};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
