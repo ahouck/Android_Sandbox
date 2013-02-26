@@ -1,11 +1,13 @@
 package com.New_Boston_Tutorial;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import android.app.Activity;
 import android.app.WallpaperManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -28,6 +30,8 @@ public class camera extends Activity implements View.OnClickListener {
 		
 		setContentView(R.layout.photo);
 		initialize();
+		InputStream inputStream = getResources().openRawResource(R.drawable.ic_launcher);
+		bmp = BitmapFactory.decodeStream(inputStream); 
 	}
 	
 	private void initialize(){
