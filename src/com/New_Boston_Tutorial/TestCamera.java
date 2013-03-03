@@ -14,7 +14,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.view.*;
 
-public class camera extends Activity implements View.OnClickListener {
+public class TestCamera extends Activity implements View.OnClickListener {
 
 	ImageButton ib;
 	Button b;

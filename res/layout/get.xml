@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/txtSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnStartAct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txtSend"
+        android:layout_toRightOf="@+id/btnStartActforResult"
+        android:text="Start Activity" />
+
+    <Button
+        android:id="@+id/btnStartActforResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@id/btnStartAct"
+        android:text="Start Activity for Result" />
+
+    <TextView
+        android:id="@+id/txtViewGet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnStartActforResult"
+        android:layout_centerInParent="true"
+        android:text="txtViewGot" />
+
+</RelativeLayout>

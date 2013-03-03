@@ -18,8 +18,10 @@ public final class R {
         public static final int analogClock1=0x7f08000a;
         public static final int bSentEmail=0x7f080009;
         public static final int btnAdd=0x7f080002;
-        public static final int btnResults=0x7f08000f;
-        public static final int btnSetWallpaper=0x7f08000d;
+        public static final int btnResults=0x7f080019;
+        public static final int btnSetWallpaper=0x7f080011;
+        public static final int btnStartAct=0x7f08000c;
+        public static final int btnStartActforResult=0x7f08000d;
         public static final int btnSubtract=0x7f080001;
         public static final int etAction=0x7f080007;
         public static final int etEmails=0x7f080003;
@@ -27,20 +29,30 @@ public final class R {
         public static final int etName=0x7f080005;
         public static final int etOutro=0x7f080008;
         public static final int etThings=0x7f080006;
-        public static final int imgbtnTakePic=0x7f08000c;
-        public static final int ivReturnPic=0x7f08000b;
-        public static final int menu_settings=0x7f080012;
-        public static final int tbPassword=0x7f080010;
+        public static final int imgbtnTakePic=0x7f080010;
+        public static final int ivReturnPic=0x7f08000f;
+        public static final int menu_settings=0x7f08001c;
+        public static final int rdo1=0x7f080014;
+        public static final int rdo2=0x7f080015;
+        public static final int rdo3=0x7f080016;
+        public static final int rdogAnswers=0x7f080013;
+        public static final int tbPassword=0x7f08001a;
         public static final int txtDisplay=0x7f080000;
-        public static final int txtEdit=0x7f08000e;
-        public static final int txtResults=0x7f080011;
+        public static final int txtEdit=0x7f080018;
+        public static final int txtResults=0x7f08001b;
+        public static final int txtSend=0x7f08000b;
+        public static final int txtViewGet=0x7f08000e;
+        public static final int txtViewQuestion=0x7f080012;
+        public static final int txtViewTest=0x7f080017;
     }
     public static final class layout {
         public static final int activity_starting_point=0x7f030000;
         public static final int email=0x7f030001;
-        public static final int photo=0x7f030002;
-        public static final int splash=0x7f030003;
-        public static final int text=0x7f030004;
+        public static final int get=0x7f030002;
+        public static final int photo=0x7f030003;
+        public static final int send=0x7f030004;
+        public static final int splash=0x7f030005;
+        public static final int text=0x7f030006;
     }
     public static final class menu {
         public static final int activity_starting_point=0x7f070000;
