@@ -51,13 +51,18 @@
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:configChanges="orientation|screenSize"
             android:name=".TestCamera"
+            android:configChanges="orientation|screenSize"
             android:label="Camera Application" >
         </activity>
-                <activity
-            android:configChanges="orientation|screenSize"
+        <activity
             android:name=".Data"
+            android:configChanges="orientation|screenSize"
+            android:label="Practicing Transfering Data" >
+        </activity>
+        <activity
+            android:name=".OpenedClass"
+            android:configChanges="orientation|screenSize"
             android:label="Practicing Transfering Data" >
         </activity>
     </application>
