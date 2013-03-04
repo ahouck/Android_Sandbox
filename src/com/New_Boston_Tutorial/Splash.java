@@ -28,7 +28,7 @@ public class Splash extends Activity{
 						e.printStackTrace();
 					}
 					finally{
-						Intent openStartingPoint = new Intent(Splash.this, Menu.class);
+						Intent openStartingPoint = new Intent(Splash.this, MainMenu.class);
 						startActivity(openStartingPoint);
 						
 					}

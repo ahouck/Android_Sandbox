@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Menu"
+            android:name="com.New_Boston_Tutorial.MainMenu"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.New_Boston_Tutorial.MENU" />
@@ -64,6 +64,16 @@
             android:name=".OpenedClass"
             android:configChanges="orientation|screenSize"
             android:label="Practicing Transfering Data" >
+        </activity>
+                <activity
+            android:name=".AboutUs"
+            android:theme="@android:style/Theme.Dialog"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.New_Boston_Tutorial.ABOUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 
