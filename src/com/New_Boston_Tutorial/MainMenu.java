@@ -57,8 +57,11 @@ public class MainMenu extends ListActivity {
 		case R.id.aboutUs:
 			startActivity(new Intent("com.New_Boston_Tutorial.ABOUT"));
 			break;
-
 		case R.id.preferences:
+			startActivity(new Intent("com.New_Boston_Tutorial.PREFS"));
+			break;
+		case R.id.exit:
+			finish();
 			break;
 		}
 		return false;
