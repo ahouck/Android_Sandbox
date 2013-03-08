@@ -14,15 +14,15 @@ public class Prefs extends PreferenceActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-
+/*
 		Class thisClass = Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB ? Prefs.class
 				: Pref_Frag.class;
 		Intent i = new Intent(this, thisClass);
 		startActivity(i);
-/*
+*/
 		Pref_Frag p = new Pref_Frag();
 		FragmentTransaction frag_man = getFragmentManager().beginTransaction();
 		frag_man.replace(android.R.id.content, p);
-		frag_man.commit();*/
+		frag_man.commit();
 	}
 }

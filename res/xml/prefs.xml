@@ -10,8 +10,8 @@
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="checkbox"
-        android:summary="Check Box Preference"
-        android:title="Check Box" />
+        android:title="Music"
+        android:summary="For the splash screen" />
 
     <ListPreference
         android:key="list"
