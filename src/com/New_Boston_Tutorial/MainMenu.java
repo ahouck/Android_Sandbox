@@ -8,20 +8,28 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainMenu extends ListActivity {
 	String classes[] = { StartingPoint.class.getName(),
 			TextPlay.class.getName(), Email.class.getName(),
-			TestCamera.class.getName(), Data.class.getName() };
+			TestCamera.class.getName(), Data.class.getName(), GraphicAnimations.class.getName() };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		
+		//set window to be fullscreen
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		
+		
 		setListAdapter(new ArrayAdapter<String>(MainMenu.this,
-				android.R.layout.simple_list_item_1, classes));
+				android.R.layout.simple_list_item_1, classes));		
 	}
 
 	@Override

@@ -61,14 +61,19 @@
             android:label="Practicing Transfering Data" >
         </activity>
         <activity
+            android:name=".GraphicAnimations"
+            android:configChanges="orientation|screenSize"
+            android:label="Practicing Animations" >
+        </activity>
+        <activity
             android:name=".OpenedClass"
             android:configChanges="orientation|screenSize"
             android:label="Practicing Transfering Data" >
         </activity>
-                <activity
+        <activity
             android:name=".AboutUs"
-            android:theme="@android:style/Theme.Dialog"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Dialog" >
             <intent-filter>
                 <action android:name="com.New_Boston_Tutorial.ABOUT" />
 
@@ -77,8 +82,8 @@
         </activity>
         <activity
             android:name=".Prefs"
-            android:theme="@android:style/Theme.Dialog"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Dialog" >
             <intent-filter>
                 <action android:name="com.New_Boston_Tutorial.PREFS" />
 

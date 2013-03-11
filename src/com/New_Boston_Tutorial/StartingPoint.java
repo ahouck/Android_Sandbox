@@ -26,6 +26,7 @@ public class StartingPoint extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				/*
 				for(int i=2; i <= 10000; i++)
 				{
 					if(isPrime(i,2))
@@ -39,9 +40,9 @@ public class StartingPoint extends Activity {
 						}
 						
 					}
-				}
-			//	total++;
-			//	txtDisplay.setText("Total = " + total);
+				}*/
+				total++;
+				txtDisplay.setText("Total = " + total);
 			}
 		});
 		// Onclick Event
