@@ -16,7 +16,8 @@ import android.widget.ListView;
 public class MainMenu extends ListActivity {
 	String classes[] = { StartingPoint.class.getName(),
 			TextPlay.class.getName(), Email.class.getName(),
-			TestCamera.class.getName(), Data.class.getName(), GraphicAnimations.class.getName() };
+			TestCamera.class.getName(), Data.class.getName(), GraphicAnimations.class.getName(),
+			GFXSurface.class.getName()};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

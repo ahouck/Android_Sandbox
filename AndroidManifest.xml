@@ -66,6 +66,10 @@
             android:label="Practicing Animations" >
         </activity>
         <activity
+            android:name=".GFXSurface"
+            android:label="Animation Using Surface View" >
+        </activity>
+        <activity
             android:name=".OpenedClass"
             android:configChanges="orientation|screenSize"
             android:label="Practicing Transfering Data" >
