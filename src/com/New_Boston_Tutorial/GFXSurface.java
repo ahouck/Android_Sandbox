@@ -22,11 +22,10 @@ public class GFXSurface extends Activity implements OnTouchListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		tester = BitmapFactory.decodeResource(
-				getResources(), R.drawable.btn);
-		secondImage = BitmapFactory.decodeResource(
-				getResources(), R.drawable.btn_selected);
-		
+		tester = BitmapFactory.decodeResource(getResources(), R.drawable.btn);
+		secondImage = BitmapFactory.decodeResource(getResources(),
+				R.drawable.btn_selected);
+
 		ourSurfaceView = new SurfaceAnimation(this);
 		ourSurfaceView.setOnTouchListener(this);
 		setContentView(ourSurfaceView);
@@ -52,19 +51,22 @@ public class GFXSurface extends Activity implements OnTouchListener {
 	public boolean onTouch(View v, MotionEvent event) {
 		x = event.getX();
 		y = event.getY();
-		
+
 		switch (event.getAction()) {
 		case MotionEvent.ACTION_DOWN:
-			sX= event.getX();
+			sX = event.getX();
 			sY = event.getY();
+			fX = fY = dX = dY = animateX = animateY = scaleX = scaleY = 0;
 			break;
 		case MotionEvent.ACTION_UP:
 			fX = event.getX();
 			fY = event.getX();
 			dX = fX - sX;
 			dY = fY - sY;
-			scaleX = dX/30;
-			scaleY = dY/30;
+			scaleX = dX / 30;
+			scaleY = dY / 30;
+			x = 0;
+			y = 0;
 			break;
 		}
 		return true;
@@ -96,18 +98,23 @@ public class GFXSurface extends Activity implements OnTouchListener {
 				Canvas canvas = surfaceHolder.lockCanvas();
 				canvas.drawRGB(80, 80, 80);
 				if (x != 0 && y != 0) {
+
 					canvas.drawBitmap(tester, (x - (tester.getWidth() / 2)),
 							(y - (tester.getHeight() / 2)), null);
+
 				}
 				if (sX != 0 && sY != 0) {
-					canvas.drawBitmap(secondImage, (x - (secondImage.getWidth() / 2)),
-							(y - (secondImage.getHeight() / 2)), null);
+					canvas.drawBitmap(secondImage,
+							(sX - (secondImage.getWidth() / 2)),
+							(sY - (secondImage.getHeight() / 2)), null);
 				}
 				if (fX != 0 && fY != 0) {
-					canvas.drawBitmap(secondImage, (x - (secondImage.getWidth() / 2)- animateX),
-							(y - (secondImage.getHeight() / 2)-animateYm), null);
-					canvas.drawBitmap(tester, (x - (tester.getWidth() / 2)),
-							(y - (tester.getHeight() / 2)), null);
+					canvas.drawBitmap(secondImage,
+							(fX - (secondImage.getWidth() / 2) - animateX),
+							(fY - (secondImage.getHeight() / 2) - animateY),
+							null);
+					canvas.drawBitmap(tester, (fX - (tester.getWidth() / 2)),
+							(fY - (tester.getHeight() / 2)), null);
 				}
 				animateX = animateX + scaleX;
 				animateY = animateY + scaleY;
