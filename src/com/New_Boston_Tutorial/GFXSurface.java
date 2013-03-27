@@ -15,19 +15,18 @@ import android.view.View.OnTouchListener;
 public class GFXSurface extends Activity implements OnTouchListener {
 
 	SurfaceAnimation ourSurfaceView;
-	float x, y, sX, sY, fX, fY;
+	float x, y, sX, sY, fX, fY, dX, dY, animateX, animateY, scaleX, scaleY = 0;
+	Bitmap tester, secondImage;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		x = 0;
-		y = 0;
-		sX = 0;
-		sY = 0;
-		fX = 0;
-		fY = 0;
-
+		tester = BitmapFactory.decodeResource(
+				getResources(), R.drawable.btn);
+		secondImage = BitmapFactory.decodeResource(
+				getResources(), R.drawable.btn_selected);
+		
 		ourSurfaceView = new SurfaceAnimation(this);
 		ourSurfaceView.setOnTouchListener(this);
 		setContentView(ourSurfaceView);
@@ -53,6 +52,21 @@ public class GFXSurface extends Activity implements OnTouchListener {
 	public boolean onTouch(View v, MotionEvent event) {
 		x = event.getX();
 		y = event.getY();
+		
+		switch (event.getAction()) {
+		case MotionEvent.ACTION_DOWN:
+			sX= event.getX();
+			sY = event.getY();
+			break;
+		case MotionEvent.ACTION_UP:
+			fX = event.getX();
+			fY = event.getX();
+			dX = fX - sX;
+			dY = fY - sY;
+			scaleX = dX/30;
+			scaleY = dY/30;
+			break;
+		}
 		return true;
 
 	}
@@ -82,11 +96,21 @@ public class GFXSurface extends Activity implements OnTouchListener {
 				Canvas canvas = surfaceHolder.lockCanvas();
 				canvas.drawRGB(80, 80, 80);
 				if (x != 0 && y != 0) {
-					Bitmap tester = BitmapFactory.decodeResource(
-							getResources(), R.drawable.btn);
 					canvas.drawBitmap(tester, (x - (tester.getWidth() / 2)),
 							(y - (tester.getHeight() / 2)), null);
 				}
+				if (sX != 0 && sY != 0) {
+					canvas.drawBitmap(secondImage, (x - (secondImage.getWidth() / 2)),
+							(y - (secondImage.getHeight() / 2)), null);
+				}
+				if (fX != 0 && fY != 0) {
+					canvas.drawBitmap(secondImage, (x - (secondImage.getWidth() / 2)- animateX),
+							(y - (secondImage.getHeight() / 2)-animateYm), null);
+					canvas.drawBitmap(tester, (x - (tester.getWidth() / 2)),
+							(y - (tester.getHeight() / 2)), null);
+				}
+				animateX = animateX + scaleX;
+				animateY = animateY + scaleY;
 				surfaceHolder.unlockCanvasAndPost(canvas);
 
 			}
